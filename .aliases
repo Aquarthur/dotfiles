@@ -1,0 +1,4 @@
+# Default aliases, add more depending on machine
+alias ez="vim ~/.zshrc"
+alias ea="vim ~/.aliases"
+alias sz="source ~/.zshrc"
