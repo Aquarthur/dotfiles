@@ -1,4 +1,12 @@
 # Default aliases, add more depending on machine
 alias ez="vim ~/.zshrc"
 alias ea="vim ~/.aliases"
-alias sz="source ~/.zshrc"
+alias sz="source ~/.zshrc; zsh -i"
+
+alias ls="ls --color=auto -G"
+alias lsa="ls --color=auto -lah"
+alias l="ls --color=auto -lah"
+alias ll="ls --color=auto -lh"
+alias la="ls --color=auto -lAh"
+
+alias gd="g dsf"
