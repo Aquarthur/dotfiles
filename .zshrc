@@ -18,6 +18,7 @@ setopt hist_save_no_dups                # Omit older commands in favor of newer 
 autoload -U history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
+# Change bindings to "^[[A" and "^[[B" for Mac
 bindkey "${terminfo[kcuu1]}" history-beginning-search-backward-end
 bindkey "${terminfo[kcud1]}" history-beginning-search-forward-end
 
