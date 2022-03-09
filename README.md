@@ -23,10 +23,10 @@ On my local machine, zsh is up and ready to use in just under ~0.05s, as seen be
 
 I have a similar setup on my work machine and it's slightly slower (but still very fast) there, at just over ~0.10s.
 
-Either way, everything loads in very quickly thanks to [zinit](https://github.com/zdharma/zinit). It's not the easiest plugin manager to learn but I really recommend it if you're looking for a faster shell!
+Either way, everything loads in very quickly thanks to [zinit](https://github.com/zdharma-continuum/zinit). It's not the easiest plugin manager to learn but I really recommend it if you're looking for a faster shell!
 
 ## Plugins included
-I'm using [zinit](https://github.com/zdharma/zinit) as the plugin manager to load in:
+I'm using [zinit](https://github.com/zdharma-continuum/zinit) as the plugin manager to load in:
 
 * [Pure](https://github.com/sindresorhus/pure) (theme)
 * [alias-tips](https://github.com/djui/alias-tips)
@@ -35,8 +35,8 @@ I'm using [zinit](https://github.com/zdharma/zinit) as the plugin manager to loa
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 * [zsh-bd](https://github.com/Tarrasch/zsh-bd)
 * [zsh-completions](https://github.com/zsh-users/zsh-completions)
-* [zsh-diff-so-fancy](https://github.com/zdharma/zsh-diff-so-fancy)
-* [zsh-fast-syntax-highlighting](https://github.com/zdharma/fast-syntax-highlighting)
+* [zsh-diff-so-fancy](https://github.com/zdharma-continuum/zsh-diff-so-fancy)
+* [zsh-fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)
 * [zsh-nvm](https://github.com/sindresorhus/zsh-nvm)
 * [zsh-z](https://github.com/agkozak/zsh-z)
 
