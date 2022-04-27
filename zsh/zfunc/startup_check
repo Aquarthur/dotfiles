@@ -1,0 +1,2 @@
+num_of_starts=$1
+for i in $(seq 1 ${num_of_starts:-10}); do time zsh -i -c exit; done
