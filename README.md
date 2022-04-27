@@ -1,8 +1,14 @@
 # Dotfiles
 
-My dotfiles. I'm not a particularly avid user of tools like vim so for now I only have a `.zshrc` and `.aliases`.
+My dotfiles. I'm not a particularly avid user of tools like vim so for now I only have a `.zshrc` and `.zaliases`.
 
-## Performance
+## Installation
+
+To install these dotfiles, run `./bootstrap.sh`. **Please note**: this will replace existing configuration files in your home directory, so be careful!
+
+## ZSH
+
+### Performance
 
 On my local machine, zsh is up and ready to use in just under ~0.05s, as seen below (the `startup_check` function is defined in `.zshrc`):
 
@@ -25,7 +31,7 @@ I have a similar setup on my work machine and it's slightly slower (but still ve
 
 Either way, everything loads in very quickly thanks to [zinit](https://github.com/zdharma-continuum/zinit). It's not the easiest plugin manager to learn but I really recommend it if you're looking for a faster shell!
 
-## Plugins included
+### Plugins included
 I'm using [zinit](https://github.com/zdharma-continuum/zinit) as the plugin manager to load in:
 
 * [Pure](https://github.com/sindresorhus/pure) (theme)
