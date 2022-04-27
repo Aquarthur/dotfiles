@@ -26,6 +26,10 @@ bootstrap_zinit () {
     zinit light sindresorhus/pure
 
     # First round of plugins
+    ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down)
+    ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}")
+    HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='underline'
+    HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
     zinit wait lucid for \
         agkozak/zsh-z \
         hlissner/zsh-autopair \
@@ -35,7 +39,8 @@ bootstrap_zinit () {
         atload'!_zsh_autosuggest_start' \
             zsh-users/zsh-autosuggestions \
         blockf \
-            zsh-users/zsh-completions
+            zsh-users/zsh-completions \
+        zsh-users/zsh-history-substring-search
 
     # Second round of plugins
     export NVM_COMPLETION=true
@@ -48,6 +53,7 @@ bootstrap_zinit () {
             zdharma-continuum/zsh-diff-so-fancy \
         djui/alias-tips \
         lukechilds/zsh-nvm
+        
 
     # oh-my-zsh plugins
     zinit snippet OMZL::git.zsh

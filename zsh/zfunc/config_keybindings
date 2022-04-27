@@ -1,0 +1,10 @@
+# Keybindings
+zle -N history-substring-search-up
+zle -N history-substring-search-down
+if [[ $OSTYPE == "darwin"* ]]; then
+  bindkey "^[[A" history-substring-search-up
+  bindkey "^[[B" history-substring-search-down
+else
+  bindkey "$terminfo[kcuu1]" history-substring-search-up
+  bindkey "$terminfo[kcud1]" history-substring-search-down
+fi

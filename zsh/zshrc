@@ -3,16 +3,16 @@ fpath=( ~/.zfunc "${fpath[@]}" )
 
 # Configuration functions - run then unset
 autoload -Uz config_zhist
-autoload -Uz history_search_keybindings
-autoload -Uz bootstrap_zinit
+autoload -Uz config_zinit
+autoload -Uz config_keybindings
 
 config_zhist
-history_search_keybindings
-bootstrap_zinit
+config_zinit
+config_keybindings
 
 unset -f config_zhist
-unset -f history_search_keybindings
-unset -f bootstrap_zinit
+unset -f config_keybindings
+unset -f config_zinit
 
 # Utility functions
 autoload -Uz startup_check
