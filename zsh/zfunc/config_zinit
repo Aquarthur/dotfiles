@@ -42,11 +42,11 @@ bootstrap_zinit () {
             zdharma-continuum/fast-syntax-highlighting \
         blockf \
             zsh-users/zsh-completions
-        
+
     # Third round of plugins
     export NVM_COMPLETION=true
     export NVM_LAZY_LOAD=true
-    export NVM_LAZY_LOAD_EXTRA_COMMAND=('yarn')   
+    export NVM_LAZY_LOAD_EXTRA_COMMAND=('yarn')
     zinit wait'1' lucid for \
         atinit'zstyle ":history-search-multi-word" page-size "7"' \
             zdharma-continuum/history-search-multi-word \
