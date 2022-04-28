@@ -1,7 +1,5 @@
 # Dotfiles
 
-My dotfiles. I'm not a particularly avid user of tools like vim so for now I only have a `.zshrc` and `.zaliases`.
-
 ## Installation
 
 To install these dotfiles, run `./bootstrap.sh`. **Please note**: this will replace existing configuration files in your home directory, so be careful!
