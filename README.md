@@ -36,13 +36,14 @@ I'm using [zinit](https://github.com/zdharma-continuum/zinit) as the plugin mana
 
 * [Pure](https://github.com/sindresorhus/pure) (theme)
 * [alias-tips](https://github.com/djui/alias-tips)
-* [history-search-multi-word](https://github.com/zdharma/history-search-multi-word)
+* [history-search-multi-word](https://github.com/zdharma-continuum/history-search-multi-word)
 * [zsh-autopair](https://github.com/hlissner/zsh-autopair)
 * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 * [zsh-bd](https://github.com/Tarrasch/zsh-bd)
 * [zsh-completions](https://github.com/zsh-users/zsh-completions)
 * [zsh-diff-so-fancy](https://github.com/zdharma-continuum/zsh-diff-so-fancy)
 * [zsh-fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting)
+* [zsh-history-substring-search](zsh-users/zsh-history-substring-search)
 * [zsh-nvm](https://github.com/sindresorhus/zsh-nvm)
 * [zsh-z](https://github.com/agkozak/zsh-z)
 
