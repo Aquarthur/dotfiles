@@ -38,7 +38,6 @@ bootstrap_zinit () {
     zinit wait lucid for \
         agkozak/zsh-z \
         hlissner/zsh-autopair \
-        Tarrasch/zsh-bd \
         atinit'ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay' \
             zdharma-continuum/fast-syntax-highlighting \
         blockf \
