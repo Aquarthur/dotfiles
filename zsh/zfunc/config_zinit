@@ -25,7 +25,14 @@ bootstrap_zinit () {
     zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
     zinit light sindresorhus/pure
 
-    # First round of plugins
+    # First round of plugins - no turbo
+    ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}")
+    ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down)
+    zinit for \
+        light-mode zsh-users/zsh-autosuggestions \
+                   zsh-users/zsh-history-substring-search
+
+    # Second round of plugins
     HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='underline'
     HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
     zinit wait lucid for \
@@ -34,19 +41,14 @@ bootstrap_zinit () {
         Tarrasch/zsh-bd \
         atinit'ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay' \
             zdharma-continuum/fast-syntax-highlighting \
-        atload'!_zsh_autosuggest_start' \
-            zsh-users/zsh-autosuggestions \
         blockf \
             zsh-users/zsh-completions
         
-    # Second round of plugins
-    # Quick note: some bugs with autosuggestions/history-substring-search if used quickly after terminal starts.
-    # Not sure how to fix.
+    # Third round of plugins
     export NVM_COMPLETION=true
     export NVM_LAZY_LOAD=true
     export NVM_LAZY_LOAD_EXTRA_COMMAND=('yarn')   
     zinit wait'1' lucid for \
-        zsh-users/zsh-history-substring-search \
         atinit'zstyle ":history-search-multi-word" page-size "7"' \
             zdharma-continuum/history-search-multi-word \
         as'program' pick'bin/git-dsf' \
