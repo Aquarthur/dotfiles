@@ -14,7 +14,6 @@ zmodule zdharma-continuum/zsh-diff-so-fancy
 zmodule agkozak/z
 zmodule hlissner/zsh-autopair
 zmodule djui/alias-tips
-zmodule lukechilds/zsh-nvm
 
 zmodule ohmyzsh/ohmyzsh --root lib/git.zsh
 zmodule ohmyzsh/ohmyzsh --root plugins/git
