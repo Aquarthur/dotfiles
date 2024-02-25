@@ -29,10 +29,9 @@ On my local machine, zsh is up and ready to use in just under ~0.05s, as seen be
 
 I have a similar setup on my work machine and it's slightly slower (but still very fast) there, at just over ~0.10s.
 
-Either way, everything loads in very quickly thanks to [zinit](https://github.com/zdharma-continuum/zinit). It's not the easiest plugin manager to learn but I really recommend it if you're looking for a faster shell!
-
 ### Plugins included
-I'm using [zinit](https://github.com/zdharma-continuum/zinit) as the plugin manager to load in:
+
+I'm using [zimfw](https://github.com/zimfw/zimfw) as the plugin manager to load in:
 
 * [Pure](https://github.com/sindresorhus/pure) (theme)
 * [alias-tips](https://github.com/djui/alias-tips)

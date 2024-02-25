@@ -1,18 +1,33 @@
 # Load zfunc
 fpath=( ~/.zfunc "${fpath[@]}" )
 
+# Configure zsh plugins (the NVM ones specifically are required to be set before loading the plugin)
+# Clear autosuggestions when navigating history
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}")
+ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down expand-or-complete bracketed-paste accept-line push-line-or-edit)
+# Define how the query should be highlighted inside a matching command
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='underline'
+# Define how query should be highlighted when no commands in the history match it
+HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
+# Enable default bash_completion profile for nvm
+NVM_COMPLETION=true
+# Enable lazy loading - will load node first time you run nvm, npm, or node
+NVM_LAZY_LOAD=true
+# Add yarn to the commands to lazy load node
+NVM_LAZY_LOAD_EXTRA_COMMAND=('yarn')
+
 # Configuration functions - run then unset
 autoload -Uz config_zhist
-autoload -Uz config_zinit
+autoload -Uz config_zim
 autoload -Uz config_keybindings
 
 config_zhist
-config_zinit
+config_zim
 config_keybindings
 
 unset -f config_zhist
 unset -f config_keybindings
-unset -f config_zinit
+unset -f config_zim
 
 # Utility functions
 autoload -Uz startup_check

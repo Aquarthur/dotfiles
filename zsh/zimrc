@@ -1,0 +1,22 @@
+zmodule sindresorhus/pure --source async.zsh --source pure.zsh
+
+zmodule zdharma-continuum/fast-syntax-highlighting
+
+zmodule zsh-users/zsh-completions --fpath src
+zmodule completion
+
+zmodule zsh-users/zsh-autosuggestions
+zmodule zsh-users/zsh-history-substring-search
+
+zmodule zdharma-continuum/history-search-multi-word
+zmodule zdharma-continuum/zsh-diff-so-fancy
+
+zmodule agkozak/z
+zmodule hlissner/zsh-autopair
+zmodule djui/alias-tips
+zmodule lukechilds/zsh-nvm
+
+zmodule ohmyzsh/ohmyzsh --root lib/git.zsh
+zmodule ohmyzsh/ohmyzsh --root plugins/git
+zmodule ohmyzsh/ohmyzsh --root plugins/colored-man-pages
+zmodule ohmyzsh/ohmyzsh --root plugins/git-auto-fetch

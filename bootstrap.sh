@@ -24,6 +24,7 @@ bootstrap () {
   overwrite_with_check ${HOME}/.zfunc ${BASEDIR}/zsh/zfunc
   overwrite_with_check ${HOME}/.zaliases ${BASEDIR}/zsh/zaliases
   overwrite_with_check ${HOME}/.zshrc ${BASEDIR}/zsh/zshrc
+  overwrite_with_check ${HOME}/.zimrc ${BASEDIR}/zsh/zimrc
 }
 
 bootstrap

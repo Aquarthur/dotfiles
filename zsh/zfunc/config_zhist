@@ -1,6 +1,6 @@
 HISTFILE=~/.zsh_history
-HISTSIZE=100000
-SAVEHIST=100000
+HISTSIZE=50000
+SAVEHIST=50000
 
 setopt autocd                           # Allow changing directories without `cd`
 setopt append_history                   # Don't overwrite history

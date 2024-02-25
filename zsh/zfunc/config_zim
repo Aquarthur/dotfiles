@@ -1,0 +1,75 @@
+# Use degit to install modules
+zstyle ':zim:zmodule' use 'degit'
+
+# Set ZIM_HOME
+export ZIM_HOME=~/.zim
+
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+      https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+fi
+
+# Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init -q
+fi
+
+# Initialize modules.
+source ${ZIM_HOME}/init.zsh
+
+# # Load a few important annexes, without Turbo
+# # (this is currently required for annexes)
+# zinit light-mode for \
+#     zdharma-continuum/zinit-annex-as-monitor \
+#     zdharma-continuum/zinit-annex-bin-gem-node \
+#     zdharma-continuum/zinit-annex-patch-dl \
+#     zdharma-continuum/zinit-annex-rust
+
+### End of Zinit's installer chunk
+
+# bootstrap_zinit () {
+#     # Theme
+#     zinit ice compile'(pure|async).zsh' pick'async.zsh' src'pure.zsh'
+#     zinit light sindresorhus/pure
+
+#     # First round of plugins - no turbo
+#     ZSH_AUTOSUGGEST_CLEAR_WIDGETS=("${(@)ZSH_AUTOSUGGEST_CLEAR_WIDGETS:#(up|down)-line-or-history}")
+#     ZSH_AUTOSUGGEST_CLEAR_WIDGETS+=(history-substring-search-up history-substring-search-down)
+#     zinit for \
+#         light-mode zsh-users/zsh-autosuggestions \
+#                    zsh-users/zsh-history-substring-search
+
+#     # Second round of plugins
+#     HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='underline'
+#     HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=''
+#     zinit wait lucid for \
+#         agkozak/zsh-z \
+#         hlissner/zsh-autopair \
+#         atinit'ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay' \
+#             zdharma-continuum/fast-syntax-highlighting \
+#         blockf \
+#             zsh-users/zsh-completions
+
+#     # Third round of plugins
+#     export NVM_COMPLETION=true
+#     export NVM_LAZY_LOAD=true
+#     export NVM_LAZY_LOAD_EXTRA_COMMAND=('yarn')
+#     zinit wait'1' lucid for \
+#         atinit'zstyle ":history-search-multi-word" page-size "7"' \
+#             zdharma-continuum/history-search-multi-word \
+#         as'program' pick'bin/git-dsf' \
+#             zdharma-continuum/zsh-diff-so-fancy \
+#         djui/alias-tips \
+#         lukechilds/zsh-nvm
+
+#     # oh-my-zsh plugins
+#     zinit snippet OMZL::git.zsh
+#     zinit snippet OMZP::git
+#     zinit cdclear -q
+
+#     zinit snippet OMZP::colored-man-pages
+#     zinit snippet OMZP::git-auto-fetch
+# }
+
+# bootstrap_zinit "$@"
