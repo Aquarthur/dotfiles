@@ -10,24 +10,30 @@ Also note that the included `.vimrc` is only there temporarily and is not instal
 
 ### Performance
 
-On my local machine, zsh is up and ready to use in just under ~0.05s, as seen below (the `startup_check` function is defined in `.zshrc`):
+On my local machine, zsh is up and ready to use in around 1/10 of a second, as seen below (the `startup_check` function is defined in `.zshrc`):
 
 ```shell
-~/dev/projects/dotfiles master
-❯ startup_check 10
-  0.16s user 0.05s system 101% cpu 0.209 total
-  0.04s user 0.01s system 101% cpu 0.045 total
-  0.03s user 0.01s system 100% cpu 0.044 total
-  0.03s user 0.01s system 100% cpu 0.044 total
-  0.04s user 0.01s system 100% cpu 0.044 total
-  0.04s user 0.01s system 100% cpu 0.044 total
-  0.04s user 0.01s system 100% cpu 0.045 total
-  0.03s user 0.01s system 100% cpu 0.047 total
-  0.04s user 0.01s system 100% cpu 0.045 total
-  0.04s user 0.01s system 101% cpu 0.044 total
+~/dev/projects/open-source/dotfiles main* ⇡
+❯ startup_check 15
+  0.06s user 0.06s system 105% cpu 0.110 total
+  0.08s user 0.04s system 103% cpu 0.113 total
+  0.05s user 0.07s system 105% cpu 0.110 total
+  0.05s user 0.07s system 105% cpu 0.108 total
+  0.05s user 0.06s system 105% cpu 0.109 total
+  0.06s user 0.06s system 105% cpu 0.109 total
+  0.05s user 0.07s system 105% cpu 0.112 total
+  0.06s user 0.06s system 82% cpu 0.145 total
+  0.04s user 0.08s system 105% cpu 0.109 total
+  0.06s user 0.05s system 105% cpu 0.112 total
+  0.04s user 0.08s system 105% cpu 0.110 total
+  0.07s user 0.05s system 105% cpu 0.109 total
+  0.05s user 0.06s system 105% cpu 0.109 total
+  0.06s user 0.06s system 105% cpu 0.110 total
+  0.05s user 0.06s system 105% cpu 0.109 total
 ```
 
-I have a similar setup on my work machine and it's slightly slower (but still very fast) there, at just over ~0.10s.
+Note: I used to use [zinit](https://github.com/zdharma-continuum/zinit), and while the initial start-up was faster, the first interactions
+with the terminal lagged - I'd often have to wait a few seconds for it to catch up.
 
 ### Plugins included
 
